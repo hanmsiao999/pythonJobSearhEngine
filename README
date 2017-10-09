@@ -1,3 +1,3 @@
- pythonJobCrawler（出门向左） 爬取的数据 存如ElasticSearch中
+ pythonJobCrawler（出门向左） 爬取的数据 存入ElasticSearch中
  应用Django  + ElasticSearch 构建搜索引擎
  并统计分析 Python 程序员的薪资分布  职位描述图云
