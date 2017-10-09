@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Python职位统计信息</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <img src="{% static "img/Python Job Distribution.jpg" %}">
+        </td>
+        <td>
+            <img src="{% static "img/wordCount.png" %}"/>
+        </td>
+    </tr>
+    <tr>
+        {% for item in files %}
+
+            <td>
+              <img src="{% static "img" %}/{{ item }}  "/>
+            </td>
+        {% endfor %}
+    </tr>
+
+
+</table>
+</body>
+</html>

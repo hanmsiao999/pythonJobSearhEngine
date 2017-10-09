@@ -1,0 +1,41 @@
+{% extends  "result_base.html" %}
+
+{% block content %}
+	{% for item in all_hits %}
+		<div class="resultItem">
+				<div class="itemHead">
+					<a href="{{ item.jobUrl }}"  target="_blank" class="title">
+						{% autoescape off %} {{ item.title }}{% endautoescape %}
+					</a>
+					<span class="divsion">-</span>
+					<span class="fileType">
+						<span class="label">来源：</span>
+						<span class="value">{{ item.job_org }}</span>
+					</span>
+					<span class="dependValue">
+						<span class="label">得分：</span>
+						<span class="value">{{ item.score }}</span>
+					</span>
+				</div>
+				<div class="itemBody">
+				  {% autoescape off %} {{ item.jobDesc }}{% endautoescape %}
+				</div>
+				<div class="itemFoot">
+					<span class="info">
+						<label>公司名：</label>
+						<span class="value">{{ item.companyName }}</span>
+					</span>
+					<span class="info">
+						<label>工作城市：</label>
+						<span class="value">{{ item.jobCity }}</span>
+					</span>
+					<span class="info">
+						<label>创建日期：</label>
+						<span class="value">{{ item.create_time }}</span>
+					</span>
+				</div>
+			</div>
+	{% endfor %}
+
+					
+{% endblock %} 
